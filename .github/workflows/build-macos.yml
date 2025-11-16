@@ -23,6 +23,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install py2app PyQt5
 
+      - name: Test import okwin
+        run: |
+          python -c "import okwin; print('Imported okwin OK')"
+
       - name: Build .app with py2app
         run: |
           python setup.py py2app
